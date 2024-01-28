@@ -34,16 +34,7 @@ class BookingsControllerTests {
 
     @MockBean
     private TicketBookingApplication ticketBookingApplication;
-   /* @MockBean
-    private StationsService stationsService;
-    @MockBean
-    private UsersService usersService;
-    @MockBean
-    private PricesService pricesService;
-    @MockBean
-    private TrainsService trainsService;
-    @MockBean
-    private SectionsService sectionsService;*/
+
     @MockBean
     private BookingsService bookingsService;
 
