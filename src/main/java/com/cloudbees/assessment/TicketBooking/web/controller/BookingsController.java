@@ -20,8 +20,13 @@ public class BookingsController {
     private BookingsService bookingsService;
 
     @GetMapping(path = "/allBookings")
-    public Iterable<Bookings> getAllBookings(){
-        return bookingsService.getAllBookings();
+    public List<BookingBean> getAllBookings(){
+        List<BookingBean> bookingBeanList = new ArrayList<>();
+        Iterable<Bookings> bookingsIterable =bookingsService.getAllBookings();
+        for(Bookings b:bookingsIterable){
+            bookingBeanList.add(convertToBookingBean(b));
+        }
+        return bookingBeanList;
     }
 
     @GetMapping(path = "/{bookingId}")
